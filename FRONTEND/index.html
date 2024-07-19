@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventPlanner360</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>EventPlanner360</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#create-event">Create Event</a></li>
+            <li><a href="#guest-list">Guest List</a></li>
+            <li><a href="#budget-tracking">Budget Tracking</a></li>
+            <li><a href="#vendor-coordination">Vendor Coordination</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="create-event">
+            <h2>Create a Event</h2>
+            <div class="card">
+                <form id="event-form">
+                    <label for="event-name">Event Name:</label>
+                    <input type="text" id="event-name" name="event-name" required>
+                    <label for="event-date">Event Date:</label>
+                    <input type="date" id="event-date" name="event-date" required>
+                    <label for="event-location">Event Location:</label>
+                    <input type="text" id="event-location" name="event-location" required>
+                    <label for="event-description">Event Description:</label>
+                    <textarea id="event-description" name="event-description"></textarea>
+                    <label for="event-budget">Event Budget:</label>
+                    <input type="number" id="event-budget" name="event-budget">
+                    <button type="submit">Create a Event</button>
+                </form>
+            </div>
+        </section>
+        <section id="guest-list">
+            <h2>Guest List</h2>
+            <div class="card">
+                <form id="guest-form">
+                    <label for="guest-name">Guest Name:</label>
+                    <input type="text" id="guest-name" name="guest-name" required>
+                    <label for="guest-email">Guest Email ID:</label>
+                    <input type="email" id="guest-email" name="guest-email" required>
+                    <label for="guest-rsvp">RSVP:</label>
+                    <select id="guest-rsvp" name="guest-rsvp">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <button type="submit">Add Guest</button>
+                </form>
+            </div>
+        </section>
+        <section id="budget-tracking">
+            <h2>Budget Tracking</h2>
+            <div class="card">
+                <form id="budget-form">
+                    <label for="budget-category">Category:</label>
+                    <input type="text" id="budget-category" name="budget-category" required>
+                    <label for="budget-amount">Amount:</label>
+                    <input type="number" id="budget-amount" name="budget-amount" required>
+                    <button type="submit">Add Budget Item</button>
+                </form>
+            </div>
+        </section>
+        <section id="vendor-coordination">
+            <h2>Vendor Coordination</h2>
+            <div class="card">
+                <form id="vendor-form">
+                    <label for="vendor-name">Vendor Name:</label>
+                    <input type="text" id="vendor-name" name="vendor-name" required>
+                    <label for="vendor-service">Service:</label>
+                    <input type="text" id="vendor-service" name="vendor-service" required>
+                    <label for="vendor-contact">Contact Number:</label>
+                    <input type="text" id="vendor-contact" name="vendor-contact" required>
+                    <button type="submit">Add Vendor</button>
+                </form>
+            </div>
+        </section>
+        <section id="schedule">
+            <h2>Schedule</h2>
+            <div class="card">
+                <form id="schedule-form">
+                    <label for="schedule-event">Event:</label>
+                    <input type="text" id="schedule-event" name="schedule-event" required>
+                    <label for="schedule-date">Date:</label>
+                    <input type="date" id="schedule-date" name="schedule-date" required>
+                    <label for="schedule-time">Time:</label>
+                    <input type="time" id="schedule-time" name="schedule-time" required>
+                    <button type="submit">Add Event to Schedule</button>
+                </form>
+            </div>
+        </section>
+        
+        <ul id="events-list">
+            <li class="event-item">
+                <div class="event-details">
+                    <span class="event-name">Event Name:</span> 
+                    <span class="event-date">Event Date:</span> 
+                    <span class="event-location">Event Location:</span>
+                </div>
+                <div class="event-description">
+                    (Event description goes here)
+                </div>
+                <div class="event-budget">
+                </div>
+            </li>
+        </ul>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 EventPlanner360. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
